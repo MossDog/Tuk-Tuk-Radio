@@ -25,12 +25,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" data-theme="pastel">
-      <body className="min-h-screen">
+      <body className="min-h-screen bg-blue-200">
         {/* Top bar */}
         <TopBar />
 
         {/* Main content area */}
-        <main className="relative min-h-[calc(100vh-4rem)] bg-base-200">
+        <main className="relative min-h-[calc(100vh-4rem)]">
           {children}
         </main>
       </body>
