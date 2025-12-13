@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "BAB",
-  description: "This is the main webpage for BAB",
+  title: "Tuk Tuk Radio",
+  description: "This is the main webpage for Tuk Tuk Radio",
 };
 
 export default function RootLayout({
@@ -30,7 +30,7 @@ export default function RootLayout({
         <TopBar />
 
         {/* Main content area */}
-        <main className="relative min-h-[calc(100vh-4rem)]">
+        <main className="relative min-h-[calc(100vh-4rem)] px-[15vw]">
           {children}
         </main>
       </body>
