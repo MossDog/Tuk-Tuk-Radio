@@ -1,13 +1,71 @@
 @import "tailwindcss";
+@import "tw-animate-css";
 
-@plugin "daisyui" {
-  themes: all;
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --background: oklch(95.38% 0.0357 72.89);
+  --secondary-background: oklch(100% 0 0);
+  --foreground: oklch(0% 0 0);
+  --main-foreground: oklch(0% 0 0);
+  --main: oklch(72.27% 0.1894 50.19);
+  --border: oklch(0% 0 0);
+  --ring: oklch(0% 0 0);
+  --overlay: oklch(0% 0 0 / 0.8);
+  --shadow: 4px 2px 0px 0px var(--border);
+  --chart-1: #ff7a05;
+  --chart-2: #0099ff;
+  --chart-3: #ffbf00;
+  --chart-4: #00d696;
+  --chart-5: #7a83ff;
+  --chart-active-dot: #000;
+}
+
+.dark {
+  --background: oklch(26.86% 0.0327 60.06);
+  --secondary-background: oklch(23.93% 0 0);
+  --foreground: oklch(92.49% 0 0);
+  --main-foreground: oklch(0% 0 0);
+  --main: oklch(67.56% 0.1796 49.61);
+  --border: oklch(0% 0 0);
+  --ring: oklch(100% 0 0);
+  --shadow: 4px 2px 0px 0px var(--border);
+  --chart-1: #eb6d00;
+  --chart-2: #008ae5;
+  --chart-3: #e5ac00;
+  --chart-4: #00bd84;
+  --chart-5: #7a83ff;
+  --chart-active-dot: #fff;
+}
+
+@theme inline {
+  --color-main: var(--main);
+  --color-background: var(--background);
+  --color-secondary-background: var(--secondary-background);
+  --color-foreground: var(--foreground);
+  --color-main-foreground: var(--main-foreground);
+  --color-border: var(--border);
+  --color-overlay: var(--overlay);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+
+  --spacing-boxShadowX: 4px;
+  --spacing-boxShadowY: 2px;
+  --spacing-reverseBoxShadowX: -4px;
+  --spacing-reverseBoxShadowY: -2px;
+  --radius-base: 5px;
+  --shadow-shadow: var(--shadow);
+  --font-weight-base: 600;
+  --font-weight-heading: 900;
 }
 
 @layer base {
   body {
-    font-family: var(--font-sans), system-ui, sans-serif;
-    @apply text-base;
+    @apply text-foreground font-base bg-background;
   }
 
   h1,
@@ -16,122 +74,22 @@
   h4,
   h5,
   h6 {
-    @apply font-extrabold;
-  }
-
-  h1 {
-    @apply text-5xl leading-tight;
-  }
-
-  h2 {
-    @apply text-4xl leading-tight;
-  }
-
-  h3 {
-    @apply text-3xl leading-snug;
-  }
-  h4 {
-    @apply text-2xl leading-tight;
-  }
-
-  h5 {
-    @apply text-xl leading-snug;
+    @apply font-heading;
   }
 }
 
-/*
-DUE TO HOW THESE CUSTOM CLASSES ARE NAMED, THE CUSTOM UTIL FUNCTION "cnRaw()" MUST BE USED IN PLACE OF "cn()" TO STOP TAILWIND FROM PURGING THEM AS IT MISIDENTIFIES THEM AS CONFLICTING STYLES
-*/
 @layer utilities {
-  /*FONT OUTLINE THICKNESS CLASSES*/
-  .font-outline-1 {
-    -webkit-text-stroke-width: 1px;
-  }
-  .font-outline-2 {
-    -webkit-text-stroke-width: 2px;
-  }
-  .font-outline-3 {
-    -webkit-text-stroke-width: 3px;
-  }
-  .font-outline-4 {
-    -webkit-text-stroke-width: 4px;
-  }
-  .font-outline-5 {
-    -webkit-text-stroke-width: 5px;
-  }
-
-  /*FONT OUTLINE COLOR CLASSES*/
-  .font-outline-primary {
-    -webkit-text-stroke-color: var(--color-primary);
-  }
-  .font-outline-secondary {
-    -webkit-text-stroke-color: var(--color-secondary);
-  }
-  .font-outline-accent {
-    -webkit-text-stroke-color: var(--color-accent);
-  }
-  .font-outline-accent-content {
-    -webkit-text-stroke-color: var(--color-accent-content);
-  }
-  .font-outline-info {
-    -webkit-text-stroke-color: var(--color-info);
-  }
-  .font-outline-success {
-    -webkit-text-stroke-color: var(--color-success);
-  }
-  .font-outline-warning {
-    -webkit-text-stroke-color: var(--color-warning);
-  }
-  .font-outline-error {
-    -webkit-text-stroke-color: var(--color-error);
-  }
-  .font-outline-neutral {
-    -webkit-text-stroke-color: var(--color-neutral);
-  }
-
-  /*FONT FILL COLOR CLASSES*/
-  .font-fill-primary {
-    -webkit-text-fill-color: var(--color-primary);
-  }
-  .font-fill-secondary {
-    -webkit-text-fill-color: var(--color-secondary);
-  }
-  .font-fill-accent {
-    -webkit-text-fill-color: var(--color-accent);
-  }
-  .font-fill-info {
-    -webkit-text-fill-color: var(--color-info);
-  }
-  .font-fill-success {
-    -webkit-text-fill-color: var(--color-success);
-  }
-  .font-fill-warning {
-    -webkit-text-fill-color: var(--color-warning);
-  }
-  .font-fill-error {
-    -webkit-text-fill-color: var(--color-error);
-  }
-  .font-fill-neutral {
-    -webkit-text-fill-color: var(--color-neutral);
-  }
-  .font-fill-neutral-content {
-    -webkit-text-fill-color: var(--color-neutral-content);
-  }
-
-  /*TEXT SHADOW CLASSES*/
-  .text-shadow-sm {
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15);
-  }
-  .text-shadow {
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-  }
-  .text-shadow-md {
-    text-shadow: 4px 4px 3px rgba(0, 0, 0, 0.75);
-  }
-  .text-shadow-lg {
-    text-shadow: 6px 6px 16px rgba(0, 0, 0, 0.3);
-  }
-  .text-shadow-none {
-    text-shadow: none;
+  .bg-grid {
+    background-image: linear-gradient(
+        to right,
+        color-mix(in oklch, var(--color-border) 10%, transparent) 1px,
+        transparent 1px
+      ),
+      linear-gradient(
+        to bottom,
+        color-mix(in oklch, var(--color-border) 10%, transparent) 1px,
+        transparent 1px
+      );
+    background-size: 64px 64px;
   }
 }

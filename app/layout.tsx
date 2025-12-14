@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { DM_Sans } from "next/font/google";
 import "./globals.css";
 import TopBar from "@/components/TopBar";
+import { cn } from "@/lib/utils";
 
-const inter = Inter({
+const dm_sans = DM_Sans({
   subsets: ["latin"],
-  weight: ["400", "500", "700", "900"],
   variable: "--font-sans",
 });
 
@@ -20,13 +20,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={inter.variable} data-theme="pastel">
-      <body className="min-h-screen bg-sky-200">
+    <html lang="en" className={cn(dm_sans.variable, "light")}>
+      <body className="min-h-screen bg-grid">
         {/* Top bar */}
         <TopBar />
 
         {/* Main content area */}
-        <main className="relative min-h-[calc(100vh-4rem)] px-[20vw]">
+        <main className="relative min-h-[calc(100vh-4rem)]">
           {children}
         </main>
       </body>
