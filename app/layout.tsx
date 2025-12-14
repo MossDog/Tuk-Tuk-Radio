@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { DM_Sans } from "next/font/google";
 import "./globals.css";
 import TopBar from "@/components/TopBar";
 
-const inter = Inter({
+const dm_sans = DM_Sans({
   subsets: ["latin"],
-  weight: ["400", "500", "700", "900"],
   variable: "--font-sans",
 });
 
@@ -20,8 +19,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={inter.variable} data-theme="pastel">
-      <body className="min-h-screen bg-sky-200">
+    <html lang="en" className={dm_sans.variable}>
+      <body className="min-h-screen background">
         {/* Top bar */}
         <TopBar />
 
