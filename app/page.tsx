@@ -20,7 +20,7 @@ export default function Home() {
 
                 <div className="flex flex-col items-center mx-auto">
                   <Image
-                    src="/Images/babis_headshot.jpg"
+                    src="/images/babis_headshot.jpg"
                     alt="Band photo"
                     className="rounded-lg border-4 border-black"
                     width={300}
