@@ -1,16 +1,12 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import TopBar from "@/components/TopBar";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const inter = Inter({
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  weight: ["400", "500", "700", "900"],
+  variable: "--font-sans",
 });
 
 export const metadata: Metadata = {
@@ -24,13 +20,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" data-theme="pastel">
-      <body className="min-h-screen bg-blue-200">
+    <html lang="en" className={inter.variable} data-theme="pastel">
+      <body className="min-h-screen bg-sky-200">
         {/* Top bar */}
         <TopBar />
 
         {/* Main content area */}
-        <main className="relative min-h-[calc(100vh-4rem)] px-[15vw]">
+        <main className="relative min-h-[calc(100vh-4rem)] px-[20vw]">
           {children}
         </main>
       </body>
