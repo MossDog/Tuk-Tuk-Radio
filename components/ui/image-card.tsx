@@ -22,7 +22,7 @@ export default function ImageCard({ imageUrl, caption, className }: Props) {
           src={imageUrl}
           alt={caption}
           fill
-          className="object-cover object-top"
+          className="object-cover fill object-top"
           sizes="250px"
         />
       </div>
