@@ -1,4 +1,5 @@
 import ImageCard from "@/components/ui/image-card";
+import Gallery from "@/components/Gallery";
 
 export default function Home() {
   return (
@@ -13,7 +14,7 @@ export default function Home() {
             {/* Headshots */}
             <div className="flex flex-col items-center mx-auto gap-y-4 md:flex-row md:mx-0 justify-evenly">
                 <ImageCard className="bg-main"
-                  caption="Babis Katsis - Bassist"
+                  caption="Babis Katsaitis - Bassist"
                   imageUrl="/images/babis_headshot.jpg">
                 </ImageCard>
 
@@ -42,10 +43,11 @@ export default function Home() {
 
           {/* Gallery Panel */}
           <div className="md:col-start-1 p-8 bg-main rounded-base shadow-shadow border-border border-2">
-            <div className="">
-              <h2 className="">Gallery</h2>
-              <p>Photos & Videos of previous gigs</p>
+            <div className="mb-4">
+              <h2 className="text-xl font-semibold">Gallery</h2>
+              <p className="text-sm text-black/70">Moments from past gigs</p>
             </div>
+            <Gallery />
           </div>
 
         </div>

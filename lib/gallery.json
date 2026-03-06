@@ -1,0 +1,53 @@
+[
+  {
+    "type": "image",
+    "src": "/gallery/527183438_17842669134551120_8549885329718579852_n.jpg",
+    "title": "Photo 1"
+  },
+    {
+    "type": "image",
+    "src": "/gallery/Clontarf_and_Grand_Canal_Dock1.jpg",
+    "title": "Photo 1"
+  },
+    {
+    "type": "image",
+    "src": "/gallery/Clontarf_and_Grand_Canal_Dock2.jpg",
+    "title": "Photo 1"
+  },
+  {
+    "type": "video",
+    "src": "/gallery/bass_solo.mp4",
+    "title": "Video 1",
+    "thumbnail": "/gallery/thumbnails/bass_solo.png"
+  },
+    {
+    "type": "video",
+    "src": "/gallery/Friday_Nights_at_Surge_Clontarf.mp4",
+    "title": "Video 1",
+    "thumbnail": "/gallery/thumbnails/Friday_Nights_at_Surge_Clontarf.png"
+  },
+    {
+    "type": "video",
+    "src": "/gallery/isnt_she_lovely.mp4",
+    "title": "Video 1",
+    "thumbnail": "/gallery/thumbnails/isnt_she_lovely.png"
+  },
+    {
+    "type": "video",
+    "src": "/gallery/Short_Reel_of_Isnt_She_Lovely.mp4",
+    "title": "Video 1",
+    "thumbnail": "/gallery/thumbnails/Short_Reel_of_Isnt_She_Lovely.png"
+  },
+    {
+    "type": "video",
+    "src": "/gallery/vid1.mp4",
+    "title": "Video 1",
+    "thumbnail": "/gallery/thumbnails/vid1.png"
+  },
+    {
+    "type": "video",
+    "src": "/gallery/vid2.mp4",
+    "title": "Video 1",
+    "thumbnail": "/gallery/thumbnails/vid2.png"
+  }
+]
