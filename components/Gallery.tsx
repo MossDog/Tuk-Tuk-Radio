@@ -36,22 +36,22 @@ export default function Gallery() {
 
   return (
     <>
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div className="grid grid-cols-2 md:grid-cols-4">
         {items.map((item, idx) => (
           <div
             key={idx}
-            className="w-full aspect-square max-w-[250px] mx-auto overflow-hidden rounded shadow bg-main cursor-pointer"
+            className="cursor-pointer"
             onClick={() => {
               setSelectedIdx(idx);
               setModalOpen(true);
             }}
           >
-            <div className="relative w-full h-full aspect-square">
+            <div className="relative aspect-square">
               <Image
                 src={item.type === "image" ? item.src : item.thumbnail || "/gallery/video-placeholder.jpg"}
-                alt="gallery image"
+                alt="gallery media"
                 fill
-                className="object-cover object-top rounded"
+                className="object-cover object-top border-border border-2"
                 sizes="250px"
               />
             </div>
