@@ -1,5 +1,6 @@
 import ImageCard from "@/components/ui/image-card";
 import Gallery from "@/components/Gallery";
+import Tracks from "@/components/Tracks";
 
 export default function Home() {
   return (
@@ -30,17 +31,11 @@ export default function Home() {
               <p>While Tuk Tuk Radio usually performs in wine bars and restaurant settings, the duo is aiming to take their sound to the stages of Dublin’s live music venues in the year ahead. Drawing influence from a wide range of genres, hence the name, you never quite know what to expect: it might be jazz, it might be funk, it might be chill, or it might be all of them at once.</p>
               <p>Their goal is simple: to make people feel good and have a great time.</p>
             </div>
-            
           </div>
 
           {/* Tracks Panel */}
-          <div className="md:col-start-2 md:row-span-2 bg-main p-8 rounded-base shadow-shadow border-border border-2">
-            <div className="">
-              <h2 className="">Popular Tracks</h2>
-              <p>Cards for most popular spotify tracks</p>
-            </div>
-          </div>
-
+          <Tracks className="bg-main border-border border-2 shadow-shadow p-4 rounded-base"/>
+          
           {/* Gallery Panel */}
           <div className="md:col-start-1 p-8 bg-main rounded-base shadow-shadow border-border border-2">
             <div className="mb-4">
