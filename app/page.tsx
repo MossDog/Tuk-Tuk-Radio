@@ -6,10 +6,10 @@ export default function Home() {
   return (
     <div className="h-full px-4 py-8 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-6xl">
-        <div className="grid gap-8 md:grid-cols-[2fr_1fr] md:items-stretch">
+        <div className="grid gap-8 md:grid-cols-[2fr_1fr] md:auto-rows-min md:grid-flow-dense">
 
           {/* Meet The Band Panel */}
-          <div className="md:col-start-1 px-8 bg-secondary-background rounded-base shadow-shadow border-border border-2">
+          <div className="md:col-start-1 md:row-start-1 px-8 bg-secondary-background rounded-base shadow-shadow border-border border-2">
             <h2 className="my-4 scroll-m-20 text-2xl font-semibold tracking-tight">Meet The Band</h2>
 
             {/* Headshots */}
@@ -34,10 +34,12 @@ export default function Home() {
           </div>
 
           {/* Tracks Panel */}
-          <Tracks className="bg-main border-border border-2 shadow-shadow p-4 rounded-base"/>
+            <div className="w-full md:col-start-2 md:row-start-1">
+              <Tracks className="bg-main border-border border-2 shadow-shadow p-4 rounded-base"/>
+            </div>
           
           {/* Gallery Panel */}
-          <div className="md:col-start-1 p-8 bg-main rounded-base shadow-shadow border-border border-2">
+          <div className="md:col-start-1 md:row-start-2 p-8 bg-main rounded-base shadow-shadow border-border border-2">
             <div className="mb-4">
               <h2 className="text-xl font-semibold">Gallery</h2>
               <p className="text-sm text-black/70">Moments from past gigs</p>

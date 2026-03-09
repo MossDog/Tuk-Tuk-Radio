@@ -46,7 +46,7 @@ export default function Gallery() {
               setModalOpen(true);
             }}
           >
-            <div className="relative aspect-square">
+            <div className="relative aspect-square m-1">
               <Image
                 src={item.type === "image" ? item.src : item.thumbnail || "/gallery/video-placeholder.jpg"}
                 alt="gallery media"
