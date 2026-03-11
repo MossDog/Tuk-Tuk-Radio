@@ -51,7 +51,7 @@ export default function Gallery() {
                 src={item.type === "image" ? item.src : item.thumbnail || "/gallery/video-placeholder.jpg"}
                 alt="gallery media"
                 fill
-                className="object-cover object-top border-border border-2"
+                className="object-cover object-top border-border border-2 rounded-base"
                 sizes="250px"
               />
             </div>
