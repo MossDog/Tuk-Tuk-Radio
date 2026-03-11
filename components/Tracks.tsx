@@ -47,8 +47,7 @@ export default function Tracks({ className }: TracksProps) {
       </p>
       <div className="flex flex-col gap-2">
         {tracks.map((track, idx) => {
-          // Spoof link was copied from spotify app - AKA, weird Hack to display open in app prompt
-          // Generate a random si param (22 hex chars)
+          // Spoof link si param (22 hex chars) as if copied from spotify app - AKA, weird Hack to display open in app prompt
           const randomSi = () => Array.from(crypto.getRandomValues(new Uint8Array(11))).map(b => b.toString(16).padStart(2, '0')).join("");
           let webUrl = track.external_urls?.spotify;
           if (webUrl) {
