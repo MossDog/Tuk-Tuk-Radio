@@ -3,25 +3,21 @@ import { Instagram, Music2 } from "lucide-react";
 export default function TopBar() {
   return (
     <header className="sticky top-0 z-50 py-4 bg-secondary-background border-border border-b-4">
-      <div className="flex items-center justify-center relative">
-        <div>
-          <h1 className="tracking-wide text-3xl text-black">
-            Tuk Tuk Radio
-          </h1>
-          {/* USED FOR SEEING COLOR PALETTE EASILY DURING TESTING
-          <div className="flex mt-2">
-            <div className="bg-main mr-3">main</div>
-            <div className="bg-background mr-3">background</div>
-            <div className="bg-secondary-background mr-3">secondary-background</div>
-            <div className="bg-foreground text-white mr-3">foreground</div>
-            <div className="bg-main-foreground text-white mr-3">main-foreground</div>
-            <div className="bg-border text-white mr-3">border</div>
-            <div className="bg-overlay text-white mr-3">overlay</div>
-            <div className="bg-ring text-white">ring</div>
-          </div>
-          */}
+    {/* USED FOR SEEING COLOR PALETTE EASILY DURING TESTING
+        <div className="flex mt-2">
+          <div className="bg-main mr-3">main</div>
+          <div className="bg-background mr-3">background</div>
+          <div className="bg-secondary-background mr-3">secondary-background</div>
+          <div className="bg-foreground text-white mr-3">foreground</div>
+          <div className="bg-main-foreground text-white mr-3">main-foreground</div>
+          <div className="bg-border text-white mr-3">border</div>
+          <div className="bg-overlay text-white mr-3">overlay</div>
+          <div className="bg-ring text-white">ring</div>
         </div>
-        <div className="flex gap-2 absolute right-4 top-1/2 -translate-y-1/2">
+        */}
+      <div className="flex flex-col md:flex-row items-center md:justify-between justify-center w-full relative">
+        <h1 className="tracking-wide text-3xl text-black w-full text-center">Tuk Tuk Radio</h1>
+        <div className="flex gap-2 mt-3 md:mt-0 md:static md:pr-4 md:right-0 md:top-0 md:translate-y-0 md:w-auto w-full justify-center md:justify-end">
           <a
             href="https://www.instagram.com/tuktuk_radio/?hl=en"
             target="_blank"
