@@ -21,8 +21,8 @@ export default function Tracks({ className }: TracksProps) {
         if (!res.ok) throw new Error(await res.text());
         const data = await res.json();
         setTracks(data);
-      } catch (err: any) {
-        setError(err.message || "Failed to load tracks");
+      } catch (err: unknown) {
+        setError(err instanceof Error ? err.message : "Failed to load tracks");
       } finally {
         setLoading(false);
       }
