@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { DM_Sans } from "next/font/google";
 import "./globals.css";
 import TopBar from "@/components/TopBar";
+import Footer from "@/components/Footer";
 import { cn } from "@/lib/utils";
 
 const dm_sans = DM_Sans({
@@ -29,6 +30,8 @@ export default function RootLayout({
         <main className="relative min-h-[calc(100vh-4rem)]">
           {children}
         </main>
+        {/* Footer */}
+        <Footer />
       </body>
     </html>
   );
