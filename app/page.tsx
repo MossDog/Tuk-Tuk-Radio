@@ -1,3 +1,4 @@
+
 import ImageCard from "@/components/ui/image-card";
 import Gallery from "@/components/Gallery";
 import Tracks from "@/components/Tracks";
@@ -6,6 +7,31 @@ export default function Home() {
   return (
     <div className="h-full px-4 py-8 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-6xl">
+        {/* Live Shows Card */}
+        <div className="mb-8 w-full bg-gradient-to-r from-blue-900 via-gray-900 to-purple-900 border-2 border-blue-700 rounded-xl shadow-lg p-6 flex flex-col md:flex-row items-center justify-between gap-4">
+          <div className="flex items-center gap-3">
+            <span className="text-2xl" role="img" aria-label="live">🎸</span>
+            <span className="text-lg font-semibold text-white">See Tuk Tuk Radio Live!</span>
+          </div>
+          <div className="flex flex-col md:flex-row gap-3 text-sm text-gray-200">
+            <div className="flex items-center gap-2">
+              <span className="font-medium">Thursdays:</span>
+              <a href="https://www.google.com/maps/place/Surge+Coffee/@53.3430862,-6.2452881,3354m/data=!3m1!1e3!4m6!3m5!1s0x48670f47b713f985:0x3173664e3dfd6445!8m2!3d53.3447757!4d-6.2342067!16s%2Fg%2F11v9w4qg4t?entry=ttu&g_ep=EgoyMDI2MDMwOS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" className="hover:underline text-blue-300 flex items-center gap-1">
+                <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" className="inline"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                Surge Grand Canal
+              </a>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="font-medium">Fridays:</span>
+              <a href="https://www.google.com/maps/place/SURGE+Coffee+Clontarf/@53.3626868,-6.2208235,705m/data=!3m3!1e3!4b1!5s0x48670e54d26428ff:0xe1b7125b36e45dfc!4m6!3m5!1s0x48670f6593c89633:0xdcd5f0c4905714bc!8m2!3d53.3626868!4d-6.2182486!16s%2Fg%2F11mxbjjk_f?entry=ttu&g_ep=EgoyMDI2MDMwOS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" className="hover:underline text-blue-300 flex items-center gap-1">
+                <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" className="inline"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                Surge Clontarf
+              </a>
+            </div>
+          </div>
+          <div className="text-xs text-gray-400 mt-2 md:mt-0">Come find us and enjoy the music!</div>
+        </div>
+
         <div className="grid gap-8 md:grid-cols-[2fr_1fr] md:auto-rows-min md:grid-flow-dense">
 
           {/* Meet The Band Panel */}
